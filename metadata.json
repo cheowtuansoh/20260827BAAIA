@@ -1,0 +1,6 @@
+{
+  "name": "TradeScope",
+  "description": "Real-time financial market intelligence terminal for tracking global indices, stocks, crypto, forex, and futures with interactive charts and portfolio tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

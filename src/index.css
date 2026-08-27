@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #2962ff;
+    --primary-dark: #0049db;
+    --market-up: #089981;
+    --market-down: #f23645;
+    --text-primary: #131722;
+    --text-secondary: #6a6d78;
+    --border-subtle: #e0e3eb;
+    --background-main: #ffffff;
+    --surface-bg: #f7f9ff;
+    --surface-low: #f1f4fb;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+    color: #131722;
+    background-color: #ffffff;
+  }
+
+  .font-headline {
+    font-family: 'Hanken Grotesk', 'Inter', sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', 'Inter', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+  }
+  
+  .pt-safe {
+    padding-top: max(env(safe-area-inset-top, 0px), 0px);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes flash-green {
+  0% { background-color: rgba(8, 153, 129, 0.25); color: #089981; }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(242, 54, 69, 0.25); color: #f23645; }
+  100% { background-color: transparent; }
+}
+
+.animate-tick-up {
+  animation: flash-green 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.animate-tick-down {
+  animation: flash-red 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
